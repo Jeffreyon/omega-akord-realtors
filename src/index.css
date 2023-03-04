@@ -18,11 +18,13 @@
     -webkit-text-size-adjust: 100%;
 }
 
-#header-image {
-    background-image: url("./assets/wooden-home.png");
-    @apply object-cover;
-    @apply bg-no-repeat;
-    @apply bg-right-bottom;
-    background-size: contain;
-    aspect-ratio: 2.5;
+@media screen(lg) {
+    #header-image {
+        background-image: url("./assets/wooden-home.png");
+        @apply object-cover;
+        @apply bg-no-repeat;
+        @apply bg-right-bottom;
+        background-size: contain;
+        aspect-ratio: 2.5;
+    }
 }

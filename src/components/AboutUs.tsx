@@ -5,7 +5,7 @@ function AboutUs() {
     return (
         <section className="py-10 sm:py-16 lg:py-24">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <div className="max-w-2xl mx-auto text-center">
+                <div className="max-w-2xl mx-auto sm:text-center">
                     <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
                         About us
                     </h2>
@@ -16,7 +16,9 @@ function AboutUs() {
                         solutions of every size, in every sector and across
                         every geography.
                     </p>
-                    <ButtonLink label="Learn more" url="/sign-up" />
+                    <div className="mt-12 flex justify-center">
+                        <ButtonLink label="Learn more" url="/sign-up" expand />
+                    </div>
                     <h3 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:leading-tight mt-24">
                         Create an account with us
                     </h3>
@@ -33,7 +35,9 @@ function AboutUs() {
                             alt=""
                         />
                     </div>
-                    <ButtonLink label="Learn more" url="/sign-up" />
+                    <div className="mt-12 flex justify-center">
+                        <ButtonLink label="Learn more" url="/sign-up" expand />
+                    </div>
                 </div>
             </div>
         </section>

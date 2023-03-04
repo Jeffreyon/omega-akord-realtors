@@ -43,23 +43,24 @@ function Testimonials() {
                     <p className="uppercase text-sky-600 font-semibold tracking-wider mb-4">
                         Customer Testimonials
                     </p>
-                    <div className="flex justify-between">
+                    <div className="sm:flex justify-between">
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
                             What people say about us
                         </h2>
-                        <div>
-                            <ButtonLink
-                                label="Learn more"
-                                url="/sign-up"
-                                variant="outline"
-                            />
-                        </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 gap-6 lg:gap-10 sm:grid-cols-2 md:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2 lg:grid-cols-3 ">
                     {testimonials.map((t, ii) => {
                         return <TestimonialCard key={ii} {...t} />;
                     })}
+                </div>
+                <div className="mt-12 flex justify-center">
+                    <ButtonLink
+                        label="Learn more"
+                        url="/sign-up"
+                        variant="outline"
+                        expand
+                    />
                 </div>
             </div>
         </section>

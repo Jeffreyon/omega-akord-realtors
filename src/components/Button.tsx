@@ -9,7 +9,7 @@ function Button(props: Props | any) {
         "text-sky-600 border border-sky-600 hover:bg-sky-600 hover:text-white";
     let regularStyle = "text-white bg-sky-600 hover:bg-sky-700";
     let baseStyle =
-        "inline-flex items-center justify-center px-8 py-3 text-base font-semibold  transition-all duration-200 focus:bg-sky-600 w-full";
+        "inline-flex items-center justify-center px-8 py-3 text-base font-semibold  transition-all duration-200 focus:bg-sky-600 sm:w-auto";
     let variantStyle = regularStyle;
 
     if (props.variant) {
@@ -18,6 +18,10 @@ function Button(props: Props | any) {
                 variantStyle = outlineStyle;
                 break;
         }
+    }
+
+    if (props.expand) {
+        baseStyle += " w-full";
     }
     return (
         <button

@@ -11,11 +11,11 @@ function Navbar() {
                     <a href="/" className="flex items-center">
                         <img
                             src={brandLogo}
-                            className="h-6 mr-3 sm:h-16"
+                            className="h-12 mr-3 sm:h-16"
                             alt="Logo"
                         />
                     </a>
-                    <ul className="flex items-center space-x-8 lg:flex">
+                    <ul className="items-center space-x-8 hidden lg:flex">
                         {[
                             {
                                 url: "/",
@@ -47,7 +47,7 @@ function Navbar() {
                             );
                         })}
                     </ul>
-                    <ul className="flex items-center space-x-8 lg:flex">
+                    <ul className="items-center space-x-8 hidden lg:flex">
                         <li>
                             <ButtonLink label="Sign up" url="/sign-up" />
                         </li>
@@ -76,52 +76,18 @@ function Navbar() {
                             </svg>
                         </button>
                         {isMenuOpen && (
-                            <div className="absolute top-0 left-0 w-full">
-                                <div className="p-5 bg-white border rounded shadow-sm">
+                            <div className="absolute top-0 left-0 z-10 w-full">
+                                <div className="p-5 bg-white border rounded shadow-xl">
                                     <div className="flex items-center justify-between mb-4">
                                         <div>
                                             <a
                                                 href="/"
-                                                aria-label="Company"
-                                                title="Company"
-                                                className="inline-flex items-center">
-                                                <svg
-                                                    className="w-8 text-deep-purple-accent-400"
-                                                    viewBox="0 0 24 24"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth="2"
-                                                    strokeLinecap="round"
-                                                    strokeMiterlimit="10"
-                                                    stroke="currentColor"
-                                                    fill="none">
-                                                    <rect
-                                                        x="3"
-                                                        y="1"
-                                                        width="7"
-                                                        height="12"
-                                                    />
-                                                    <rect
-                                                        x="3"
-                                                        y="17"
-                                                        width="7"
-                                                        height="6"
-                                                    />
-                                                    <rect
-                                                        x="14"
-                                                        y="1"
-                                                        width="7"
-                                                        height="6"
-                                                    />
-                                                    <rect
-                                                        x="14"
-                                                        y="11"
-                                                        width="7"
-                                                        height="12"
-                                                    />
-                                                </svg>
-                                                <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                    Company
-                                                </span>
+                                                className="flex items-center">
+                                                <img
+                                                    src={brandLogo}
+                                                    className="h-12 mr-3 sm:h-16"
+                                                    alt="Logo"
+                                                />
                                             </a>
                                         </div>
                                         <div>
@@ -145,52 +111,42 @@ function Navbar() {
                                     </div>
                                     <nav>
                                         <ul className="space-y-4">
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
-                                                    Product
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
-                                                    Features
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
-                                                    Pricing
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="About us"
-                                                    title="About us"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
-                                                    About us
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#"
-                                                    title=""
-                                                    className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white transition-all duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600"
-                                                    role="button">
-                                                    {" "}
-                                                    Start exploring{" "}
-                                                </a>
-                                            </li>
+                                            {[
+                                                {
+                                                    url: "/",
+                                                    label: "Home",
+                                                },
+                                                {
+                                                    url: "/",
+                                                    label: "About",
+                                                },
+                                                {
+                                                    url: "/",
+                                                    label: "Blog",
+                                                },
+                                                {
+                                                    url: "/",
+                                                    label: "Contact",
+                                                },
+                                            ].map((item, ii) => {
+                                                return (
+                                                    <li key={ii}>
+                                                        <a
+                                                            href={item.url}
+                                                            aria-label={
+                                                                item.label
+                                                            }
+                                                            title={item.label}
+                                                            className="font-medium tracking-wide text-slate-400 transition-colors duration-200 hover:hover:text-sky-700">
+                                                            {item.label}
+                                                        </a>
+                                                    </li>
+                                                );
+                                            })}
+                                            <ButtonLink
+                                                label="Sign up"
+                                                url="/sign-up"
+                                            />
                                         </ul>
                                     </nav>
                                 </div>

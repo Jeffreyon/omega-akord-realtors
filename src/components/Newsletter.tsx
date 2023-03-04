@@ -4,7 +4,7 @@ import mailboxImage from "../assets/mailbox.png";
 function Newsletter() {
     return (
         <section className=" body-font">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row-reverse flex-col-reverse items-center">
+            <div className="w-full mx-auto flex px-5 py-24 md:flex-row-reverse flex-col-reverse items-center">
                 <div className="md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <div className="md:max-w-md lg:col-span-2 mt-6">
                         <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight mb-4">
@@ -20,8 +20,8 @@ function Newsletter() {
                                 type="text"
                                 className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-slate-100 border border-slate-300 shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:outline-slate-400"
                             />
-                            <div>
-                                <Button type="submit" label="Subscribe" />
+                            <div className="flex justify-center">
+                                <Button label="Subscribe" expand />
                             </div>
                         </form>
                     </div>

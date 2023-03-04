@@ -47,8 +47,8 @@ function Footer() {
                         <a href="/" className="flex items-center">
                             <img
                                 src={brandLogo}
-                                className="h-6 mr-3 sm:h-16"
-                                alt="Flowbite Logo"
+                                className="h-12 mr-3 sm:h-16"
+                                alt=""
                             />
                         </a>
                         <div className="mt-6 lg:max-w-sm">
@@ -71,6 +71,7 @@ function Footer() {
                                         <Button
                                             type="submit"
                                             label="Subscribe"
+                                            expand
                                         />
                                     </div>
                                 </form>

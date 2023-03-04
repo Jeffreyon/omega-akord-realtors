@@ -30,12 +30,12 @@ function Blog() {
             <h2 className="mb-12 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
                 Blog
             </h2>
-            <div className="flex flex-col gap-6 sm:max-w-sm sm:mx-auto lg:max-w-full">
+            <div className="flex flex-col gap-6 sm:mx-auto lg:max-w-full">
                 {articles.map((a, ii) => {
                     return (
                         <div
                             key={ii}
-                            className="overflow-hidden transition-shadow duration-300 bg-white flex gap-8">
+                            className=" transition-shadow duration-300 bg-white flex flex-col lg:flex-row gap-8">
                             <div className=" min-w-fit">
                                 <a href={a.url} aria-label="Article">
                                     <img
@@ -64,6 +64,7 @@ function Blog() {
                                         label="Read more"
                                         url={a.url}
                                         variant="outline"
+                                        expand
                                     />
                                 </div>
                             </div>
