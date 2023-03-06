@@ -5,7 +5,7 @@ import SSOButton from "../components/SSOButton";
 
 function Auth() {
     return (
-        <div id="header-image" className=" bg-slate-100 bg-fixed">
+        <div id="header-image" className=" bg-[#F5F5F5] bg-fixed">
             <section className="py-10 min-h-screen">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">

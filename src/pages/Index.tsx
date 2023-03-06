@@ -9,7 +9,7 @@ import Newsletter from "../components/Newsletter";
 function Index() {
     return (
         <div className="bg-white text-slate-900">
-            <div className=" bg-slate-100">
+            <div className=" bg-[#F5F5F5]">
                 <Navbar />
                 <Header />
             </div>

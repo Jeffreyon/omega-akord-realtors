@@ -9,7 +9,7 @@ function AboutUs() {
                     <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl lg:leading-tight">
                         About us
                     </h2>
-                    <p className="mt-8 mb-6 text-lg text-gray-900">
+                    <p className="mt-8 mb-6 text-lg text-gray-600">
                         We are a world leader in commercial real estate services
                         and investments. With services, insights and data that
                         span every dimension of the industry, we create
@@ -22,7 +22,7 @@ function AboutUs() {
                     <h3 className="text-3xl font-bold leading-tight  sm:text-4xl lg:leading-tight mt-24">
                         Create an account with us
                     </h3>
-                    <p className="mt-8 mb-12 text-lg text-gray-900">
+                    <p className="mt-8 mb-12 text-lg text-gray-600">
                         Create an account with us and have access to other tools
                         available on this platform to manage and keep track of
                         your data in real time. We also created a curated

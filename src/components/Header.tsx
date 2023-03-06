@@ -17,7 +17,7 @@ function Header() {
                                 Today
                             </h1>
 
-                            <p className="mt-8 text-base text-black sm:text-xl">
+                            <p className="mt-8 text-base text-gray-600 sm:text-lg">
                                 We provide strategic partnerships between real
                                 estate marketers and real estate developers
                                 using technology driven innovations
