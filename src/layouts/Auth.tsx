@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import brandLogo from "../assets/akord-logo.png";
-import Button from "../components/Button";
+import SSOButton from "../components/SSOButton";
 
 function Auth() {
     return (
@@ -17,8 +17,23 @@ function Auth() {
                                     alt="Logo"
                                 />
                             </a>
-                            <div className="flex mt-12 sm:mt-24">
+                            <div className=" max-w-sm mt-12 sm:mt-24">
                                 <Outlet></Outlet>
+                                <div className="mt-8">
+                                    <p className="text-slate-500 mb-4">
+                                        Or sign in with
+                                    </p>
+                                    <div className="flex flex-col gap-4">
+                                        <SSOButton
+                                            label="Google"
+                                            icon="google"
+                                        />
+                                        <SSOButton
+                                            label="Facebook"
+                                            icon="facebook"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

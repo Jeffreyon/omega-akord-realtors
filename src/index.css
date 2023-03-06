@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -23,8 +25,18 @@
         background-image: url("./assets/wooden-home.png");
         @apply object-cover;
         @apply bg-no-repeat;
-        @apply bg-right-bottom;
+        @apply bg-right-top;
         background-size: contain;
         aspect-ratio: 2.5;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Rubik, san-serif;
+    @apply text-[#1F2744];
 }

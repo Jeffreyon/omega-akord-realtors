@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
+import TextLink from "../components/TextLink";
 
 function SignUp() {
     return (
@@ -9,11 +9,7 @@ function SignUp() {
             </h2>
             <p className="mt-2 text-base text-gray-600">
                 Already have an account?{" "}
-                <Link
-                    to="/sign-in"
-                    className="font-medium text-sky-600 transition-all duration-200 hover:text-sky-700 hover:underline focus:text-sky-700">
-                    Login
-                </Link>
+                <TextLink label="Login" url="/sign-in" />
             </p>
 
             <form action="#" method="POST" className="mt-8">
@@ -75,23 +71,16 @@ function SignUp() {
                             htmlFor="agree"
                             className="ml-3 text-sm font-medium text-gray-500">
                             I agree to Omega Akord’s{" "}
-                            <a
-                                href="#"
-                                title=""
-                                className="text-sky-600 hover:text-sky-700 hover:underline">
-                                Terms of Service
-                            </a>{" "}
-                            and{" "}
-                            <a
-                                href="#"
-                                title=""
-                                className="text-sky-600 hover:text-sky-700 hover:underline">
-                                Privacy Policy
-                            </a>
+                            <TextLink label="Terms of service" url="#" /> and{" "}
+                            <TextLink label="Privacy Policy" url="#" />
                         </label>
                     </div>
 
-                    <Button label="Create an account" handleClick />
+                    <Button
+                        label="Create an account"
+                        alwaysWide={true}
+                        expand={true}
+                    />
                 </div>
             </form>
 

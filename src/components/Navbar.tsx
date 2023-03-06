@@ -40,7 +40,7 @@ function Navbar() {
                                         href={item.url}
                                         aria-label={item.label}
                                         title={item.label}
-                                        className="font-medium tracking-wide text-slate-400 transition-colors duration-200 hover:hover:text-sky-700">
+                                        className="font-medium tracking-wide text-slate-400 transition-colors duration-200 hover:hover:text-[#2B559F]">
                                         {item.label}
                                     </a>
                                 </li>

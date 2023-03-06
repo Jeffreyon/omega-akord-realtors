@@ -6,10 +6,10 @@ interface Props {
 
 function Button(props: Props | any) {
     let outlineStyle =
-        "text-sky-600 border border-sky-600 hover:bg-sky-600 hover:text-white";
-    let regularStyle = "text-white bg-sky-600 hover:bg-sky-700";
+        "text-[#2B559F] border border-[#2B559F] hover:bg-[#2B559F] hover:text-white";
+    let regularStyle = "text-white bg-[#2B559F] hover:bg-[#0f3a87]";
     let baseStyle =
-        "inline-flex items-center justify-center px-8 py-3 text-base font-semibold  transition-all duration-200 focus:bg-sky-600 sm:w-auto";
+        "inline-flex items-center justify-center px-8 py-3 text-base font-semibold  transition-all duration-200  sm:w-auto";
     let variantStyle = regularStyle;
 
     if (props.variant) {
@@ -23,6 +23,8 @@ function Button(props: Props | any) {
     if (props.expand) {
         baseStyle += " w-full";
     }
+
+    if (props.alwaysWide) baseStyle += " md:w-full";
     return (
         <button
             {...props}

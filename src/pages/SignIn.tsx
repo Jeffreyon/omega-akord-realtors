@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import brandLogo from "../assets/akord-logo.png";
 import Button from "../components/Button";
+import TextLink from "../components/TextLink";
 
 function SignIn() {
     return (
@@ -10,11 +11,7 @@ function SignIn() {
             </h2>
             <p className="mt-2 text-base text-gray-600">
                 Don't have an account?{" "}
-                <Link
-                    to="/sign-up"
-                    className="font-medium text-sky-600 transition-all duration-200 hover:text-sky-700 hover:underline focus:text-sky-700">
-                    Sign up
-                </Link>
+                <TextLink label="Sign up" url="/sign-up" />
             </p>
 
             <form action="#" method="POST" className="mt-8">
@@ -49,7 +46,9 @@ function SignIn() {
                         />
                     </div>
 
-                    <Button label="Log in" handleClick />
+                    <div>
+                        <Button label="Log in" alwaysWide expand />
+                    </div>
                 </div>
             </form>
 

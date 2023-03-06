@@ -4,6 +4,7 @@ import t3 from "../assets/testimonials/3.png";
 
 import ButtonLink from "./ButtonLink";
 import TestimonialCard, { Props } from "./TestimonialCard";
+import TextLink from "./TextLink";
 
 let testimonials: Props[] = [
     {
@@ -40,27 +41,20 @@ function Testimonials() {
         <section className="py-10 sm:py-16 lg:py-24">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="mb-12">
-                    <p className="uppercase text-sky-600 font-semibold tracking-wider mb-4">
+                    <p className="uppercase text-[#2B559F] font-semibold tracking-wider mb-4">
                         Customer Testimonials
                     </p>
                     <div className="sm:flex justify-between">
-                        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
+                        <h2 className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl lg:leading-tight mb-2 sm:mb-0">
                             What people say about us
                         </h2>
+                        <TextLink label="Learn more" url="/sign-up" withIcon />
                     </div>
                 </div>
                 <div className="grid grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2 lg:grid-cols-3 ">
                     {testimonials.map((t, ii) => {
                         return <TestimonialCard key={ii} {...t} />;
                     })}
-                </div>
-                <div className="mt-12 flex justify-center">
-                    <ButtonLink
-                        label="Learn more"
-                        url="/sign-up"
-                        variant="outline"
-                        expand
-                    />
                 </div>
             </div>
         </section>

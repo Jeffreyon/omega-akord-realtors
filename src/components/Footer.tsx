@@ -91,7 +91,7 @@ function Footer() {
                                             <li key={ii}>
                                                 <a
                                                     href={l.url}
-                                                    className="font-medium tracking-wide text-slate-400 transition-colors duration-200 hover:hover:text-sky-700">
+                                                    className="font-medium tracking-wide text-slate-400 transition-colors duration-200 hover:hover:text-[#2B559F]">
                                                     {l.label}
                                                 </a>
                                             </li>
@@ -103,7 +103,7 @@ function Footer() {
                     })}
                     <div>
                         <span className="text-base font-bold tracking-wide text-gray-900">
-                            Social
+                            Follow us on
                         </span>
                         <div className="flex items-center mt-1 space-x-3">
                             <a

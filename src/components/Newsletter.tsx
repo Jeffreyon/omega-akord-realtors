@@ -7,7 +7,7 @@ function Newsletter() {
             <div className="w-full mx-auto flex px-5 py-24 md:flex-row-reverse flex-col-reverse items-center">
                 <div className="md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <div className="md:max-w-md lg:col-span-2 mt-6">
-                        <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight mb-4">
+                        <h2 className="text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl lg:leading-tight mb-4">
                             Join in
                         </h2>
                         <span className="text-base font-medium tracking-wide text-slate-500">

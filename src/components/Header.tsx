@@ -2,16 +2,15 @@ import ButtonLink from "./ButtonLink";
 
 function Header() {
     return (
-        <div id="header-image">
+        <div id="header-image" className=" w-full">
             <section className="py-10">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-1">
                         <div className=" max-w-lg sm:mx-auto sm:text-center lg:mx-0 lg:text-left">
-                            <h1 className="text-4xl font-bold text-black sm:text-6xl">
+                            <h1 className="text-4xl font-bold sm:text-6xl">
                                 Become a{" "}
                                 <div className="relative inline-flex my-2">
-                                    <span className="absolute inset-x-0 bottom-0 border-b-[15px] sm:border-b-[20px] border-[#4ADE80]"></span>
-                                    <h1 className="relative font-bold text-black ">
+                                    <h1 className="relative font-bold ">
                                         Certified Realtor
                                     </h1>
                                 </div>{" "}

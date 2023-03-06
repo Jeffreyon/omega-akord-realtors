@@ -2,6 +2,7 @@ import a1 from "../assets/articles/a1.png";
 import a2 from "../assets/articles/a2.png";
 import a3 from "../assets/articles/a3.png";
 import ButtonLink from "./ButtonLink";
+import TextLink from "./TextLink";
 
 let articles = [
     {
@@ -27,20 +28,20 @@ let articles = [
 function Blog() {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <h2 className="mb-12 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
+            <h2 className="mb-12 text-3xl font-bold leading-tight  sm:text-4xl lg:text-5xl lg:leading-tight">
                 Blog
             </h2>
-            <div className="flex flex-col gap-6 sm:mx-auto lg:max-w-full">
+            <div className="flex flex-col gap-6 sm:mx-auto lg:max-w-full mb-10">
                 {articles.map((a, ii) => {
                     return (
                         <div
                             key={ii}
-                            className=" transition-shadow duration-300 bg-white flex flex-col lg:flex-row gap-8">
+                            className=" duration-300 bg-white flex flex-col lg:flex-row gap-8">
                             <div className=" min-w-fit">
                                 <a href={a.url} aria-label="Article">
                                     <img
                                         src={a.image_url}
-                                        className="object-cover w-full h-64 "
+                                        className="object-cover w-full h-64"
                                         alt=""
                                     />
                                 </a>
@@ -50,10 +51,10 @@ function Blog() {
                                     <a
                                         href={a.url}
                                         aria-label="Article"
-                                        className="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700">
-                                        <p className="text-2xl font-bold ">
+                                        className="inline-block mb-3 hover:underline underline-offset-4">
+                                        <h5 className="text-2xl font-bold ">
                                             {a.title}
-                                        </p>
+                                        </h5>
                                     </a>
                                     <p className="mb-4 text-gray-700">
                                         {a.body}
@@ -71,6 +72,9 @@ function Blog() {
                         </div>
                     );
                 })}
+            </div>
+            <div className="text-center">
+                <TextLink label="Learn more" url="/sign-up" withIcon />
             </div>
         </div>
     );
